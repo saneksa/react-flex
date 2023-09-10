@@ -1,4 +1,4 @@
-
+[![NPM](https://img.shields.io/npm/v/@saneksa/react-flex?style=plastic&color=red)](https://npmjs.com/package/@saneksa/react-flex/) [![GitHub license](https://img.shields.io/npm/l/@saneksa/react-flex?style=plastic)](https://github.com/saneksa/react-flex/blob/master/LICENSE)
 
 ### Installation
 
