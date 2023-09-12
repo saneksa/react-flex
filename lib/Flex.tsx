@@ -9,7 +9,7 @@ import {
 export type TFlexDirection = "vertical" | "horizontal";
 
 export interface IFlexProps extends HTMLAttributes<HTMLElement> {
-  size: number;
+  gap: number;
   /** @default horizontal */
   direction?: TFlexDirection;
   align?: CSSProperties["alignItems"];
@@ -32,7 +32,7 @@ const Flex = forwardRef<HTMLDivElement, IFlexProps>(
       as: Component = "div",
       direction = "horizontal",
       children,
-      size,
+      gap,
       align,
       width,
       wrap,
@@ -49,12 +49,12 @@ const Flex = forwardRef<HTMLDivElement, IFlexProps>(
         justifyContent: justify,
         alignItems: align,
         flexWrap: wrap,
-        gap: size,
+        gap,
         width,
         flex,
         ...style,
       }),
-      [direction, justify, align, wrap, size, width, flex, style]
+      [direction, justify, align, wrap, gap, width, flex, style]
     );
 
     return (
