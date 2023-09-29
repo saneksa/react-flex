@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       <Flex
-        size={12}
+        gap={12}
         direction="horizontal"
         align="center"
         justify="center"
