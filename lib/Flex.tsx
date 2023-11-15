@@ -1,12 +1,8 @@
-import {
-  CSSProperties,
-  HTMLAttributes,
-  ReactNode,
-  forwardRef,
-  useMemo,
-} from "react";
+import { CSSProperties, HTMLAttributes, forwardRef, useMemo } from "react";
 
 export type TFlexDirection = "vertical" | "horizontal";
+
+type Children = React.ReactElement | undefined | null | false;
 
 export interface IFlexProps extends HTMLAttributes<HTMLElement> {
   gap: number;
@@ -22,7 +18,7 @@ export interface IFlexProps extends HTMLAttributes<HTMLElement> {
   wrap?: CSSProperties["flexWrap"];
 
   flex?: CSSProperties["flex"];
-  children: ReactNode;
+  children: Children | Children[];
 }
 
 const Flex = forwardRef<HTMLDivElement, IFlexProps>(
